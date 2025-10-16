@@ -1,17 +1,19 @@
 {
   "name": "@gaddario98/react-localization",
-  "version": "1.0.12",
-  "main": "dist/index.mjs",
+  "version": "1.0.15",
+  "type": "module",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/rollup-plugin-peer-deps-external": "^2",
@@ -19,32 +21,38 @@
     "i18next": "^25.5.3",
     "intl-pluralrules": "2.0.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
     "react-i18next": "^16.0.0",
     "rollup": "^4.40.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^5.8.3"
   },
-  "peerDependencies": {
+  "dependencies": {
     "i18next": "^25.5.3",
-    "intl-pluralrules": "2.0.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-i18next": "^16.0.0"
+    "intl-pluralrules": "^2.0.1",
+    "react-i18next": "^16.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0 <20.0.0"
   },
   "files": [
-    "dist"
+    "dist",
+    "adapters",
+    "i18n.ts",
+    "index.ts",
+    "useTranslatedText.ts"
   ],
   "sideEffects": false,
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gaddario98/react-localization"
+    "url": "git+https://github.com/gaddario98/react-localization"
   },
   "keywords": [
     "react",
