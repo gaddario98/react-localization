@@ -1,19 +1,18 @@
 import { createRequire } from "module";
-import { 
-  removeDirectives, 
-  createExternalChecker, 
-  handleWarning, 
-  babelConfig, 
+import {
+  removeDirectives,
+  createExternalChecker,
+  handleWarning,
+  babelConfig,
   resolveConfig,
   commonjsConfig,
-  createTreeShakableOutputs
+  createTreeShakableOutputs,
 } from "../../rollup.common.config.js";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import json from "@rollup/plugin-json";
 import typescript from "@rollup/plugin-typescript";
-import babel from "@rollup/plugin-babel";
 
 const require = createRequire(import.meta.url);
 const pkg = require("./package.json");
@@ -42,9 +41,6 @@ export default {
       declaration: true,
       declarationDir: "dist",
       rootDir: "./",
-    }),
-    babel({
-      ...babelConfig,
     }),
   ],
   onwarn: handleWarning,
