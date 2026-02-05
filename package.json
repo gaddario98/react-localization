@@ -1,6 +1,6 @@
 {
   "name": "@gaddario98/react-localization",
-  "version": "1.0.18",
+  "version": "2.0.0",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -18,28 +18,22 @@
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/rollup-plugin-peer-deps-external": "^2",
     "babel-plugin-react-compiler": "1",
-    "i18next": "^25.5.3",
-    "intl-pluralrules": "2.0.1",
     "react": "^19.2.0",
-    "react-i18next": "^16.0.0",
     "rollup": "^4.40.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "i18next": "^25.5.3",
-    "intl-pluralrules": "^2.0.1",
-    "react-i18next": "^16.0.1"
   },
   "peerDependencies": {
     "react": ">=18.0.0 <20.0.0"
   },
   "files": [
     "dist",
-    "adapters",
-    "i18n.ts",
     "index.ts",
-    "useTranslatedText.ts"
+    "useTranslatedText.ts",
+    "config.ts",
+    "types.ts",
+    "core.ts",
+    "server.ts"
   ],
   "sideEffects": false,
   "exports": {
@@ -58,7 +52,8 @@
     "react",
     "localization",
     "translation",
-    "component-library"
+    "component-library",
+    "gaddario98"
   ],
   "author": "Giosuè Addario",
   "bugs": {
