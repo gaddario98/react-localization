@@ -1,6 +1,6 @@
 {
   "name": "@gaddario98/react-localization",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -24,6 +24,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
+    "@gaddario98/react-state": "^2.0.1",
     "react": ">=18.0.0 <20.0.0"
   },
   "files": [

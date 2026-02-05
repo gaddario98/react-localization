@@ -7,7 +7,7 @@ import {
   resolveConfig,
   commonjsConfig,
   createTreeShakableOutputs,
-} from "../../rollup.common.config.js";
+} from "../../../rollup.common.config.js";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
